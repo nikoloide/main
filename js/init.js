@@ -12,10 +12,20 @@
 
 var birthday = new Date('1993-04-12')
 function _calculateAge (birthday) {
+  var now = new Date();
+  var start = new Date(now.getFullYear() - 1, 4, 12);
+  var diff = now - start;
+  var oneDay = 1000 * 60 * 60 * 24;
+  var day = Math.floor(diff / oneDay);
   var ageDifMs = Date.now() - birthday.getTime()
   var ageDate = new Date(ageDifMs) // miliseconds from epoch
   // return Math.abs(ageDate.getUTCFullYear() - 1970)
-  document.getElementById("birthday").innerHTML = Math.abs(ageDate.getUTCFullYear() - 1970)
+  //document.getElementById("birthday").innerHTML = Math.abs(ageDate.getUTCFullYear() - 1970)
+  if (day <= 1)
+  document.getElementById("birthday").innerHTML = Number(ageDate.getUTCFullYear() - 1970 + day/365).toFixed(1)
+  else
+  document.getElementById("birthday").innerHTML = Number(ageDate.getUTCFullYear() - 1970 + day/365 - 1).toFixed(1)
+
 }
 _calculateAge(birthday)
 
