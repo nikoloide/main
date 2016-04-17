@@ -21,10 +21,7 @@ function _calculateAge (birthday) {
   var ageDate = new Date(ageDifMs) // miliseconds from epoch
   // return Math.abs(ageDate.getUTCFullYear() - 1970)
   //document.getElementById("birthday").innerHTML = Math.abs(ageDate.getUTCFullYear() - 1970)
-  if (day/365 <= 1)
-  document.getElementById("birthday").innerHTML = Number(ageDate.getUTCFullYear() - 1970 + day/365).toFixed(1)
-  else
-  document.getElementById("birthday").innerHTML = Number(ageDate.getUTCFullYear() - 1970 + day/365 - 1).toFixed(1)
+  document.getElementById("birthday").innerHTML = Number(ageDate.getUTCFullYear() - 1970) // .toFixed(1)
 
 }
 _calculateAge(birthday)
