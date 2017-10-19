@@ -9,6 +9,11 @@
 /*----------------------------------------------------*/
 /* FitText Settings
 ------------------------------------------------------ */
+console.log('Javascript Loaded...')
+
+var downloadResume = function () {
+    console.log('Donwload Resume clicked')
+}
 
 var birthday = new Date('1993-04-12')
 function _calculateAge (birthday) {
