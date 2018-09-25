@@ -15,7 +15,7 @@ var downloadResume = function () {
     console.log('Donwload Resume clicked')
 }
 
-var birthday = new Date('1993-04-12')
+var birthday = new Date('1985-11-13')
 function _calculateAge (birthday) {
   var now = new Date();
   var start = new Date(now.getFullYear() - 1, 4, 12);
